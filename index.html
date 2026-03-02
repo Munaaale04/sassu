@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooming Flowers</title>
+    <!-- Google Fonts for style -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #ffe6f0, #fff9e6);
+        }
+        header {
+            background-color: #ff8fb1;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-family: 'Pacifico', cursive;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffcade;
+            padding: 1rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        nav a:hover {
+            transform: scale(1.1);
+            color: #ff416c;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            color: #ff416c;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Flower Cards */
+        .flowers {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 2rem;
+            gap: 2rem;
+        }
+        .flower-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .flower-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+        }
+        .flower-card img {
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .flower-card h3 {
+            color: #ff416c;
+            margin: 0.5rem 0;
+        }
+        .flower-card p {
+            color: #555;
+            padding: 0 1rem 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ff8fb1;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Button */
+        .flower-card button {
+            background-color: #ff416c;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 1rem;
+        }
+        .flower-card button:hover {
+            background-color: #ff80a1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Blooming Flowers</h1>
+        <p>Your online garden of Tulips, Lilies & Roses</p>
+    </header>
+
+    <nav>
+        <a href="#tulip">Tulip</a>
+        <a href="#lily">Lily</a>
+        <a href="#rose">Rose</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to Our Flower Shop!</h1>
+        <p>Discover the beauty of nature with our fresh and colorful flowers.</p>
+    </section>
+
+    <section class="flowers">
+        <!-- Tulip -->
+        <div class="flower-card" id="tulip">
+            <img src="https://images.unsplash.com/photo-1551861566-0f318cbb9a29?auto=format&fit=crop&w=800&q=80" alt="Tulip">
+            <h3>Tulip</h3>
+            <p>Bright and cheerful tulips perfect for any occasion.</p>
+            <button onclick="buyNow('Tulip')">Buy Now</button>
+        </div>
+
+        <!-- Lily -->
+        <div class="flower-card" id="lily">
+            <img src="https://images.unsplash.com/photo-1568099409540-1699e0e23f82?auto=format&fit=crop&w=800&q=80" alt="Lily">
+            <h3>Lily</h3>
+            <p>Elegant lilies to add grace and fragrance to your home.</p>
+            <button onclick="buyNow('Lily')">Buy Now</button>
+        </div>
+
+        <!-- Rose -->
+        <div class="flower-card" id="rose">
+            <img src="https://images.unsplash.com/photo-1549887534-51f6ad0dc7fa?auto=format&fit=crop&w=800&q=80" alt="Rose">
+            <h3>Rose</h3>
+            <p>Classic roses for love, celebration, and special moments.</p>
+            <button onclick="buyNow('Rose')">Buy Now</button>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Blooming Flowers | All Rights Reserved
+    </footer>
+
+    <script>
+        function buyNow(flowerName) {
+            alert(`You selected ${flowerName}! Proceeding to purchase...`);
+        }
+    </script>
+
+</body>
+</html>
